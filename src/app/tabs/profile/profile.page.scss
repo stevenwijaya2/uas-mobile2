@@ -1,0 +1,14 @@
+.bordered{
+  border: 2px solid darkslateblue;
+  border-radius: 10px;
+}
+input[type="file"]{
+  display: none;
+}
+
+.circle-image{
+  border-radius: 50%;
+  object-fit: cover;
+  position: relative;
+  overflow: hidden;
+}

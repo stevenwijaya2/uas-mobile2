@@ -1,0 +1,16 @@
+<ion-content>
+  <div #map id="map"></div>
+
+  <ion-fab vertical="top" horizontal="end"  slot="fixed"  style="padding-right: 10px">
+    <ion-fab-button (click)="presentLocationAlert()" color="danger" >
+      <ion-icon name="location-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+  <ion-fab id="fabCurLoc" vertical="bottom" horizontal="end" slot="fixed" style="padding-right: 10px">
+    <ion-fab-button (click)="getCurrentLocation()" color="danger">
+      <ion-icon name="locate-outline" class="icon-get-location"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+</ion-content>

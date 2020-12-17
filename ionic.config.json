@@ -1,0 +1,8 @@
+{
+  "name": "AaronEffendi_00000020915_IF733_CL_UAS",
+  "integrations": {
+    "capacitor": {},
+    "cordova": {}
+  },
+  "type": "angular"
+}

@@ -1,0 +1,55 @@
+<ion-content>
+  <ion-grid>
+    <ion-row class="ion-justify-content-center">
+      <ion-col size="8" class="ion-padding-top">
+        <ion-label class="ion-text-center">
+          <h1><b>Register</b></h1>
+        </ion-label>
+      </ion-col>
+    </ion-row>
+    <ion-row class="ion-justify-content-center">
+      <ion-col size="11">
+        <div class="ion-padding-horizontal">
+          <form class="form" [formGroup]="registerForm" (ngSubmit)="onRegister()">
+
+            <ion-text>First Name</ion-text>
+            <ion-item class=" ion-margin-top">
+              <ion-input type="text" formControlName="firstName"></ion-input>
+            </ion-item>
+
+            <ion-text>Last Name</ion-text>
+            <ion-item class=" ion-margin-top">
+              <ion-input type="text" value="" formControlName="lastName"></ion-input>
+            </ion-item>
+
+            <ion-text>Email</ion-text>
+            <ion-item class=" ion-margin-top">
+              <ion-input type="email" formControlName="email"></ion-input>
+            </ion-item>
+
+            <ion-text>Password</ion-text>
+            <ion-item class=" ion-margin-top">
+              <ion-input type="password" formControlName="password"></ion-input>
+            </ion-item>
+
+            <ion-text>Confirm Password</ion-text>
+            <ion-item class=" ion-margin-top">
+              <ion-input type="password" formControlName="confirmPassword"></ion-input>
+            </ion-item>
+
+              <ion-checkbox formControlName="checkbox" class="ion-margin-end ion-margin-top" color="primary"></ion-checkbox> I agree to all terms and condition
+
+            <ion-row class="ion-justify-content-center ion-margin-top">
+              <ion-col size="10" size-sm="6">
+                <ion-button type="submit" color="primary" expand="block" [disabled]="!registerForm.valid">Register</ion-button>
+              </ion-col>
+            </ion-row>
+          </form>
+          <ion-label>
+            <p class="ion-text-center">Already have account? <a [routerLink]="['/register']" >Log in here.</a></p>
+          </ion-label>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

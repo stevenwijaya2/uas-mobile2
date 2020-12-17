@@ -1,0 +1,40 @@
+<ion-content>
+  <ion-grid>
+    <ion-row class="ion-justify-content-center">
+      <ion-col size="8">
+        <div class="ion-margin-top ion-padding-top ion-text-center">
+          <ion-text>
+            <h2><b>Login</b></h2>
+          </ion-text>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row class="ion-justify-content-center">
+      <ion-col size="11">
+        <div class="ion-padding-horizontal ion-margin-top ion-padding-top">
+          <form class="form" [formGroup]="form" (ngSubmit)="onLogin()">
+
+            <!-- Masukan Email -->
+            <ion-text>Email</ion-text>
+            <ion-item lines="none" class="ion-margin-top">
+              <ion-input type="email" formControlName="email"></ion-input>
+            </ion-item>
+
+            <!-- Masukan Password -->
+            <ion-text>Password</ion-text>
+            <ion-item lines="none" class="ion-margin-top">
+              <ion-input type='password' formControlName="password"></ion-input>
+            </ion-item>
+
+            <ion-label>
+              <p class="ion-padding-top">Don't have account <a [routerLink]="['/register']" >Register here!</a></p>
+            </ion-label>
+
+            <!-- Tombol Login -->
+            <ion-button type="submit" color="primary" expand="block" [disabled]="!form.valid">Login</ion-button>
+          </form>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

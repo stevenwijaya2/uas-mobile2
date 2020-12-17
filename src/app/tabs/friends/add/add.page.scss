@@ -1,0 +1,12 @@
+.bordered{
+  border: 2px solid darkslateblue;
+  background-color: cadetblue;
+  border-radius: 50px;
+}
+
+.circle-image{
+  border-radius: 50%;
+  object-fit: cover;
+  position: relative;
+  overflow: hidden;
+}
